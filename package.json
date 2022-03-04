@@ -1,0 +1,53 @@
+{
+  "name": "tob-ui-core-2",
+  "version": "0.0.1",
+  "description": "tob-ui 下一个版本的核心库",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "scripts": {
+    "test": "vitest",
+    "build": "vite build",
+    "dev": "pnpm run test",
+    "test:watch": "vitest watch",
+    "coverage": "vitest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dishait/tob-ui-core-2.git"
+  },
+  "keywords": [
+    "vue3",
+    "tob-ui",
+    "uniapp",
+    "modern",
+    "components"
+  ],
+  "author": {
+    "name": "markthree",
+    "email": "1801982702@qq.com",
+    "url": "https://github.com/markthree"
+  },
+  "homepage": "https://github.com/markthree",
+  "bugs": {
+    "email": "1801982702@qq.com",
+    "url": "https://github.com/dishait/tob-ui-core-2"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^2.8.6",
+    "vitest": "^0.5.9"
+  },
+  "dependencies": {
+    "vue": "^3.2.31"
+  }
+}
