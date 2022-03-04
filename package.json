@@ -30,7 +30,8 @@
     "tob-ui",
     "uniapp",
     "modern",
-    "components"
+    "components",
+    "composition-api"
   ],
   "author": {
     "name": "markthree",
