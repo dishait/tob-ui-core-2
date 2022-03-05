@@ -2,6 +2,7 @@
  * design
  */
 export * from './design/color'
+export * from './design/shadow'
 
 /**
  * shared

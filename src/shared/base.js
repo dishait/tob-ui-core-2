@@ -20,3 +20,14 @@ export const variableReplace = (s, n) => {
  * 空函数
  */
 export const noop = () => {}
+
+/**
+ * 简化 base
+ * @param {string} prefix 前缀
+ * @param {string} type 类型
+ * @returns {string}
+ */
+export const simplifyBase = (prefix, type) => {
+	const isBase = type === 'base'
+	return isBase ? prefix : `${prefix}-${type}`
+}

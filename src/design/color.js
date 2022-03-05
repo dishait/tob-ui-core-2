@@ -7,7 +7,7 @@ import { variableReplace } from '../shared/base'
  * @template T
  * @param {import('vue').Prop<T>} props 属性
  * @param {{ presets: Record<string, string>, inject: string }} opts 配置
- * @returns
+ * @returns {import('vue').ComputedRef<string>}
  */
 export const createColor = (props, opts = {}) => {
 	typeIntercept(opts)

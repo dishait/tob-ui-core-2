@@ -3,9 +3,10 @@ import {
 	createColor,
 	toLightColor,
 	toOriginColor,
+	createShadow,
+	createUnrefFn,
 	toOutlineColor,
-	createPresetsWithPrefix,
-	createUnrefFn
+	createPresetsWithPrefix
 } from '../src'
 import { it, describe, expect, beforeEach } from 'vitest'
 
@@ -64,5 +65,25 @@ describe('color', () => {
 		unRefExpect(color).toBe(
 			toOutlineColor('primary', 'btn')
 		)
+	})
+})
+
+describe('shadow', () => {
+	let props = null
+	beforeEach(() => {
+		props = reactive({
+			shadow: 'base'
+		})
+	})
+
+	it('simplifyBase', () => {
+		const shadow = createShadow(props)
+		unRefExpect(shadow).toBe('shadow')
+	})
+
+	it('origin', () => {
+		const shadow = createShadow(props)
+		props.shadow = 'sm'
+		unRefExpect(shadow).toBe('shadow-sm')
 	})
 })
