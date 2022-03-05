@@ -2,6 +2,7 @@
  * design
  */
 export * from './design/size'
+export * from './design/flex'
 export * from './design/color'
 export * from './design/shadow'
 export * from './design/rounded'

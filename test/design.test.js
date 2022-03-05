@@ -8,7 +8,8 @@ import {
 	toOutlineColor,
 	createPresetsWithPrefix,
 	createRounded,
-	createSize
+	createSize,
+	createFlex
 } from '../src'
 import { it, describe, expect, beforeEach } from 'vitest'
 
@@ -134,5 +135,24 @@ describe('size', () => {
 			}
 		})
 		unRefExpect(size).toBe('text-md')
+	})
+})
+
+describe('flex', () => {
+	let props = null
+	beforeEach(() => {
+		props = reactive({
+			justify: 'start',
+			align: 'center',
+			direction: 'row-reverse'
+		})
+	})
+
+	it('origin', () => {
+		const { justify, align, direction } = createFlex(props)
+
+		unRefExpect(justify).toBe('justify-start')
+		unRefExpect(align).toBe('items-center')
+		unRefExpect(direction).toBe('flex-row-reverse')
 	})
 })
