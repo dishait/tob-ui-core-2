@@ -6,7 +6,8 @@ import {
 	createShadow,
 	createUnrefFn,
 	toOutlineColor,
-	createPresetsWithPrefix
+	createPresetsWithPrefix,
+	createRounded
 } from '../src'
 import { it, describe, expect, beforeEach } from 'vitest'
 
@@ -85,5 +86,25 @@ describe('shadow', () => {
 		const shadow = createShadow(props)
 		props.shadow = 'sm'
 		unRefExpect(shadow).toBe('shadow-sm')
+	})
+})
+
+describe('rounded', () => {
+	let props = null
+	beforeEach(() => {
+		props = reactive({
+			rounded: 'base'
+		})
+	})
+
+	it('simplifyBase', () => {
+		const rounded = createRounded(props)
+		unRefExpect(rounded).toBe('rounded')
+	})
+
+	it('origin', () => {
+		const rounded = createRounded(props)
+		props.rounded = 'sm'
+		unRefExpect(rounded).toBe('rounded-sm')
 	})
 })

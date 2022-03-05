@@ -5,7 +5,7 @@ import { simplifyBase } from '../shared/base'
  * 创建阴影
  * @template T
  * @param {import('vue').Prop<T>} props 属性
- * @returns {import('vue').ComputedRef<string>}
+ * @returns {import('vue').ComputedRef<string>} 阴影
  */
 export const createShadow = props => {
 	return computed(() => {

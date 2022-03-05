@@ -3,6 +3,7 @@
  */
 export * from './design/color'
 export * from './design/shadow'
+export * from './design/rounded'
 
 /**
  * shared
