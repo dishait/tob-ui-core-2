@@ -1,10 +1,13 @@
 <script setup>
-defineProps({
+import { isReactive } from "vue"
+const props = defineProps({
   msg: {
     type: String,
     required: true
   }
 })
+
+console.log(props)
 </script>
 
 <template>
