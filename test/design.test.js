@@ -7,7 +7,8 @@ import {
 	createUnrefFn,
 	toOutlineColor,
 	createPresetsWithPrefix,
-	createRounded
+	createRounded,
+	createSize
 } from '../src'
 import { it, describe, expect, beforeEach } from 'vitest'
 
@@ -106,5 +107,32 @@ describe('rounded', () => {
 		const rounded = createRounded(props)
 		props.rounded = 'sm'
 		unRefExpect(rounded).toBe('rounded-sm')
+	})
+})
+
+describe('size', () => {
+	let props = null
+	beforeEach(() => {
+		props = reactive({
+			size: 'md'
+		})
+	})
+
+	it('presets', () => {
+		const size = createSize(props, {
+			presets: {
+				md: 'text-md'
+			}
+		})
+		unRefExpect(size).toBe('text-md')
+	})
+
+	it('variableReplace', () => {
+		const size = createSize(props, {
+			presets: {
+				md: 'text-$'
+			}
+		})
+		unRefExpect(size).toBe('text-md')
 	})
 })
