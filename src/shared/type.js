@@ -21,13 +21,12 @@ export const is = (t, v) => showType(v) === t
  */
 export const not = (t, v) => !is(t, v)
 
-
 /**
  * 类型获取
  * @param {maybeAnyRef} v 值
  * @returns {string} 具体类型
  */
 export const showType = createUnrefFn(v => {
-    const origin = Object.prototype.toString.call(v)
-    return origin.slice(8, -1)
+	const origin = Object.prototype.toString.call(v)
+	return origin.slice(8, -1)
 })
