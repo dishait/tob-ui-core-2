@@ -17,9 +17,16 @@
   "scripts": {
     "test": "vitest",
     "build": "vite build",
-    "dev": "pnpm run test",
-    "test:watch": "vitest watch",
-    "coverage": "vitest --coverage"
+    "dev": "vite build --watch",
+    "coverage": "vitest --coverage",
+    "play": "pnpm -C examples/vue-project run dev",
+    "play:open": "pnpm -C examples/vue-project run dev:open",
+    "play:host": "pnpm -C examples/vue-project run dev:host",
+    "play:build": "pnpm -C examples/vue-project run build",
+    "play:preview": "pnpm -C examples/vue-project run preview",
+    "play:preview:open": "pnpm -C examples/vue-project run preview:open",
+    "play:preview:host": "pnpm -C examples/vue-project run preview:host",
+    "release": "bumpp --commit --push --tag && npm publish"
   },
   "repository": {
     "type": "git",
@@ -45,6 +52,8 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^17.0.21",
+    "bumpp": "^7.1.1",
     "vite": "^2.8.6",
     "vitest": "^0.5.9"
   },
