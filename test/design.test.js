@@ -1,7 +1,6 @@
 import { reactive } from "vue"
-import { createColor, toLightColor, toOriginColor, toOutlineColor, createPresetsWithPrefix } from "../src"
+import { createColor, toLightColor, toOriginColor, toOutlineColor, createPresetsWithPrefix, createUnrefFn } from "../src"
 import { it, describe, expect, beforeEach } from "vitest";
-import { createUnrefFn } from "../src/shared/composables";
 
 /**
  * @type {Vi.ExpectStatic}
